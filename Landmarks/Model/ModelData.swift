@@ -4,10 +4,13 @@
 //
 //  Created by 박인후 on 3/10/24.
 //
-
+@Observable
+class ModelData {
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+
 
 
 func load<T: Decodable>(_ filename: String) -> T {
